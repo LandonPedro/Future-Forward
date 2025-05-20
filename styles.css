@@ -1,0 +1,356 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --background-color: #f3f4f6;
+    --text-color: #1f2937;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.progress-bar {
+    width: 0%;
+    height: 4px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.scroll-container {
+    margin-top: 60px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.section {
+    min-height: 100vh;
+    display: none;
+    padding: 4rem 2rem;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.section.active {
+    display: block;
+    opacity: 1;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.next-btn, .restart-btn {
+    display: block;
+    width: 200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.next-btn:hover, .restart-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.restart-btn {
+    margin-top: 2rem;
+}
+
+/* Interactive Container */
+.interactive-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.chart-container {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.infographic {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.infographic-step {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.infographic-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.overview-item {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Salary Comparison */
+.comparison-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.salary-chart-container {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.salary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.salary-item {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.medical-salaries, .technical-salaries {
+    margin-top: 1rem;
+}
+
+/* Timeline */
+.timeline-container {
+    margin-top: 2rem;
+}
+
+.timeline-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Future Grid */
+.future-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.future-item {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Education Path */
+.education-path {
+    margin-top: 2rem;
+}
+
+.path-steps {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.research-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.research-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.timeline-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .interactive-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .salary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .future-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .path-steps {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 0 1rem;
+    }
+    
+    .next-btn, .restart-btn {
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+}
